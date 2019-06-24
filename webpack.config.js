@@ -6,7 +6,7 @@ module.exports = {
   },
   entry: [
     '@babel/polyfill', // enables async-await
-    path.join(__dirname, 'src', 'index.js')
+    path.join(__dirname, 'clientSrc', 'index.js')
   ],
   output: {
     path: path.join(__dirname, 'public'),

@@ -3,3 +3,26 @@ hr {
     color: red;
     background-color: red;
 }
+
+.navButtons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonActive {
+    border-color: darkblue;
+}
+
+.singleProduct {
+    margin: 25px;
+    padding: 25px;
+    border: solid black 3px;
+}
+
+.productName {
+    font-weight: bolder;
+}
+
+.error{
+    background-color: lightskyblue;
+}
