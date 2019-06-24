@@ -3,4 +3,4 @@ Chose to use webpack. You will find front end items in clientSrc which will buil
 
 Requires pg database called 'products'. Running seed.js in database folder will populate a minimal amount of items in 'products'.
 
-Chose not to use and hashrouter stuff. Everything is displayed as SPA, no hashchanges needed to make this work in this case. I may choose to provide an add form. Provided I have enough time before Tuesday class on June 25.
+Chose not to use any hashrouter stuff. Everything is displayed as SPA, no hashchanges needed to make this work in this case. I may choose to provide an add form. Provided I have enough time before Tuesday class on June 25.
