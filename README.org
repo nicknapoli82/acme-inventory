@@ -1,37 +1,6 @@
-* Setup for a very basic web dev environment
-I made this to basically simplify getting a project started
+* Acme Inventory
+Chose to use webpack. You will find front end items in clientSrc which will build into the public folder. 
 
-Simply clone/fork this and put it in a directory
+Requires pg database called 'products'. Running seed.js in database folder will populate a minimal amount of items in 'products'.
 
-*Run*
-npm install
-
-Thats It
-
-** Uses and configures the following
-Webpack
-Webpack-cli
-Webpack-dev-server
-Babel
-React
-React-DOM
-React-Router-DOM
-
-** Scripts available
-*** npm start
-Runs a server at specified port Default :8080
-*** npm run build-watch
-Starts webpack -w in development mode
-*** npm run build
-Builds everything for production
-
-** Directories
-*** src
-A place for all your code
-*** public
-Where *index.html* and *styles.css* lives. Change these to your liking.
-This is where the root of the page lives effectively. Using npm build will make
-main.js here.
-
-** If you have any problems let me know or submit an issue on github
-*Hope you enjoy*
+Chose not to use and hashrouter stuff. Everything is displayed as SPA, no hashchanges needed to make this work in this case. I may choose to provide an add form. Provided I have enough time before Tuesday class on June 25.
