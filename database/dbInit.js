@@ -2,9 +2,9 @@
 
 const Sequelize = require('sequelize');
 
-const PORT = process.env.DATABASE_URL || 5432;
+//const PORT = process.env.DATABASE_URL || 'postgres://acme-inventory-nick';
 
-const database = new Sequelize(`postgres://localhost:${PORT}/products`, {
+const database = new Sequelize(process.env.DATABASE_URL || 'postgres://acme-inventory-nick', {
   logging: false
 });
 
@@ -19,7 +19,16 @@ const Product = database.define('product', {
   }
 });
 
-database.sync({force: true});
+database.sync({ force: true }).then(() => {
+  Product.create({
+    name: "A Chingadero",
+    status: "INSTOCK"
+  });
+  Product.create({
+    name: "A Thingamado",
+    status: "INSTOCK"
+  });
+});
 
 module.exports = {
   database,
