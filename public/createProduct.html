@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Insert Description here">
+    <meta name="author" content="Nicholas Napoli">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--<link rel="icon" href="favicon.ico">-->
+    <link rel="stylesheet" href="styles.css">
+    <title>ACME Products</title>
+  </head>
+  <body>
+    <div>
+      <h1 id="header">Acme Inventory</h1>
+      <a href="/createProduct.html" className="createButton"><button>Create A new Product</button></a>
+    </div>
+    <hr/>
+    <div>
+      <form method="POST" action="/products/api/create" style="margin: 25px">
+	<input type="text" name="name" placeholder="Product Name" autofocus/>
+	<select defaultValue="INSTOCK" name="status">
+          <option value="INSTOCK">INSTOCK</option>
+          <option value="BACKORDERED">BACKORDERED</option>
+          <option value="DISCONTINUED">DISCONTINUED</option>          
+        </select>
+	<br>
+	<button type="submit" style="margin: 25px 0px">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

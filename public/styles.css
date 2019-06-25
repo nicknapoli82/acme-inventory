@@ -4,6 +4,10 @@ hr {
     background-color: red;
 }
 
+#header{
+    display: inline;
+}
+
 .navButtons{
     display: flex;
     justify-content: space-around;
@@ -25,4 +29,9 @@ hr {
 
 .error{
     background-color: lightskyblue;
+}
+
+.createButton{
+    float: right;
+    margin: 10px;
 }

@@ -30,8 +30,9 @@ export default class Main extends React.Component {
     const newProduct = Object.assign({}, product);
     newProduct.status = to;
 
-    const check = await axios.put(`/products/api/${id}/change`, newProduct);
+    const check = await axios.put(`/products/api/${id}/update`, newProduct);
     if(check.status === 202){
+      newProduct.updatedAt = check.data;
       const products = [...this.state.products];
       products.splice(products.findIndex(p => Number(p.id) === Number(id)), 1, newProduct);
       this.setState({products});
@@ -55,7 +56,10 @@ export default class Main extends React.Component {
     const IC = itemsCount(products);
     return (
       <div>
-        <h1>Acme Inventory</h1>
+        <div>
+          <h1 id="header">Acme Inventory</h1>
+          <a href="/createProduct.html" className="createButton"><button>Create A new Product</button></a>
+        </div>
         {this.state.error ? <p className="error">There was an error with the update</p>: null}
         <hr/>
         <div className="navButtons">
