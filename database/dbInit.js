@@ -2,7 +2,7 @@
 
 const Sequelize = require('sequelize');
 
-const PORT = process.env.DB_PORT || 5432;
+const PORT = process.env.DATABASE_URL || 5432;
 
 const database = new Sequelize(`postgres://localhost:${PORT}/products`, {
   logging: false
